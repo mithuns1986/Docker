@@ -1,0 +1,48 @@
+
+docker --version
+curl -fSsL get.docker.com | bash
+ls -lrth
+docker pull httpd
+docker images
+docker pull httpd:bookworm
+docker images
+docker pull httpd
+docker run httpd
+docker run
+docker run httpd
+docker run -itd --name container-1 -p80:80 httpd
+docker run -itd --name nginx -p81:80 nginx
+docker ps
+docker stop container-1
+docker ps
+docker ps -a
+docker start container-1
+docker ps
+docker ps
+docker srtop nginx
+docker stop nginx
+docker stop container-1
+docker ps
+docker images
+cd
+pwd
+mkdir Docker
+cd Docker/
+vim Dockerfile
+vim Dockerfile
+docker build -t index .
+vim Dockerfile
+docker build -t index .
+vim index.html
+docker build -t index .
+docker images
+docker run -itd --name index -p80:80 index
+docker ps
+docker stop index
+vim Dockerfile
+vim index.html
+docker build -t httpd:index .
+docker run -itd --name index -p80:80 httpd:index
+docker run -itd --name index2 -p80:80 httpd:index
+docker ps
+
