@@ -1,0 +1,181 @@
+curl -fsSL get.docker.com | bash 
+sudo docker -version 
+sudo docker --version 
+mkdir docker 
+cd docker/
+sudo docker images 
+sudo systemctl status docker 
+sudo systemctl start  docker 
+sudo systemctl status docker 
+sudo systemctl enable  docker 
+sudo systemctl status docker 
+sudo docker images 
+sudo docker pull httpd:2.4
+sudo docker images 
+sudo docker run -it --name webserver1 -p80:80 494b2b45fd74 
+ls
+sudo docker ps 
+sudo docker ps -a
+sudo docker start webserver1
+sudo docker ps -a
+sudo docker ps 
+sudo docker exec -it webserver1 /bin/bash 
+sudo docker ps 
+sudo docker stop webserver1
+sudo docker start webserver1
+sudo docker stop webserver1
+sudo docker rm  webserver1
+sudo docker ps 
+sudo docker ps -a
+sudo docker run -it --name webserver1 -p80:80 494b2b45fd74 
+sudo docker network ls 
+sudo docker run -itd --name webserver1 -p80:80 494b2b45fd74 
+sudo docker run -itd --name webserver2 -p80:80 494b2b45fd74 
+sudo docker ps 
+sudo docker ps -a 
+sudo docker inspect webserver2
+sudo docker inspect webserver2| grep -i network 
+ifconfig 
+sudo docker images 
+sudo dockerps -a 
+sudo docker ps -a 
+mvn -version 
+cd ..
+ls
+cd my-java-app/
+ls
+cd -
+cd docker/
+ls
+docker images 
+sudo docker images 
+cd ../my-java-app/
+ls
+mvn clean install 
+ls
+cd target/
+ls
+java -cp my-java-app-1.0-SNAPSHOT.jar com.samsung.app
+vim ../src/main/java/com/samsung/app/App.java 
+java -cp my-java-app-1.0-SNAPSHOT.jar com.samsung.App
+vim ../src/main/java/com/samsung/app/App.java 
+java -cp my-java-app-1.0-SNAPSHOT.jar com.samsung.app App
+java -cp my-java-app-1.0-SNAPSHOT.jar 
+java -cp my-java-app-1.0-SNAPSHOT.jar com.samsung.app.App
+vim Dockerfile
+pwd
+vim Dockerfile
+ls
+vim Dockerfile 
+sudo docker image build -t javaapp:maven .
+sudo docker images 
+sudo docker run -itd --name javaapp -p8081:8080 javaapp
+sudo docker run -itd --name javaapp -p8081:8080 javaapp:maven
+sudo docker ps 
+sudo docker ps -a 
+ls
+java -cp my-java-app-1.0-SNAPSHOT.jar com.samsung.app.App
+sudo docker run -it --name javaapp2 -p8081:8080 javaapp:maven
+vim Dockerfile 
+sudo docker image build -t javaapp:maven1 .
+sudo docker images 
+sudo docker run -it --name javaapp3 -p8081:8080 javaapp:maven1
+vim Dockerfile 
+ls
+cd ../
+pwd
+cd -
+ls
+vim Dockerfile 
+sudo docker image build -t javaapp:maven2 .
+vim Dockerfile 
+sudo docker image build -t javaapp:maven2 .
+ls
+cp ./../src/ .
+cp -r ./../src/ .
+ls
+vim Dockerfile 
+sudo docker image build -t javaapp:maven2 .
+sudo docker images 
+sudo docker run -it --name javaapp9 -p8081:8080 javaapp:maven2
+sudo docker run -it --name javaapp9 -p8081:8080 javaapp:maven3
+vim Dockerfile 
+sudo docker images 
+sudo docker run -it --name javaapp9 -p8081:8080 javaapp:maven2
+sudo docker run -it --name javaapp09 -p8081:8080 javaapp:maven2
+vim Dockerfile 
+sudo docker image build -t java-app:1.0 .
+sudo docker images 
+sudo docker run -it --name javaapp9 -p8081:8080 java-app:1.0 com.samsung.app.App
+sudo docker run -it --name javaapp009 -p8081:8080 java-app:1.0 com.samsung.app.App
+cd ..
+sudo docker run -it --name javaapp0009 -p8081:8080 java-app:1.0 com.samsung.app.App
+cd src/main/java/com/samsung/app/
+sudo docker run -it --name javaapp10009 -p8081:8080 java-app:1.0 com.samsung.app.App
+ls
+cd 
+git clone https://github.com/docker/getting-started-app.git
+ls
+cd getting-started-app/
+sl
+ls
+vim README.md 
+vim src/index.js 
+vim spec/routes/addItem.spec.js 
+sl
+ls
+df -h
+sudo docker ps -a 
+sudo docker ps -a | awk -F" " '{print $1}' 
+sudo docker stop `sudo docker ps -a | awk -F" " '{print $1}'` 
+sudo docker ps -a | awk -F" " '{print $1}' 
+sudo docker ps  | awk -F" " '{print $1}' 
+sudo docker rm  `sudo docker ps -a | awk -F" " '{print $1}'` 
+sudo docker ps -a 
+sudo docker images 
+sudo docker rm  `sudo docker images | awk -F" " '{print $1}'` 
+sudo docker images 
+sudo docker image prune 
+sudo docker system prune 
+sudo docker images 
+sudo docker rm cd01ff7887d2
+sudo docker rmi cd01ff7887d2
+sudo docker rmi a744c6147f07
+sudo docker rmi d2e2a73eef34
+sudo docker rmi 47eb13d1b85e
+sudo docker images 
+df -h
+ls
+vim Dockerfile
+sudo docker image build gsa:1.0 .
+sudo docker image build -t gsa:1.0 .
+sudo docker images 
+sudo docker run -itd --name app1 -p81:3000 gsa:1.0 
+sudo docker ps 
+vim src/static/js/app.js
+sudo docker ps 
+sudo docker rm 3ea605a2b3b8
+sudo docker stop 3ea605a2b3b8
+sudo docker rm 3ea605a2b3b8
+sudo docker images 
+sudo docker rmi b5987735599c
+sudo docker image build -t gsa:1.0 .
+sudo docker run -itd --name app1 -p81:3000 gsa:1.0 
+sudo docker image tag gsa:1.0 mithundevopsaws/myapp-todo:1.0
+sudo docker images 
+sudo docker push mithundevopsaws/myapp-todo:1.0 
+sudo docker login 
+sudo docker push mithundevopsaws/myapp-todo:1.0 
+sudo docker volume ls 
+sudo docker volume create mydb
+sudo docker volume ls 
+sudo docker ps -a 
+sudo docker stop 3b27e85db66c
+sudo docker rm 3b27e85db66c
+sudo docker ps -a 
+sudo docker run -itd --name app1 -p81:3000 --mount type=volume, src=mydb, target=/etc/todos gsa:1.0 
+sudo docker run -itd --name app1 -p81:3000 --mount type=volume,src=mydb,target=/etc/todos gsa:1.0 
+sudo docker ps 
+sudo docker stop app1 
+sudo docker rm app1 
+sudo docker run -itd --name app1 -p3000:3000 --mount type=volume,src=mydb,target=/etc/todos gsa:1.0 
